@@ -1,0 +1,613 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased transition-colors duration-200;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom styles for lecture prose and reveal elements */
+.lecture-prose .split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .split {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.25rem 0;
+  }
+}
+
+.lecture-prose ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  color: #334155;
+}
+
+.dark .lecture-prose ul {
+  color: #cbd5e1;
+}
+
+.lecture-prose ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+  color: #334155;
+}
+
+.dark .lecture-prose ol {
+  color: #cbd5e1;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose ul,
+  .lecture-prose ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+}
+
+.lecture-prose li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.lecture-prose .callout {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background-color: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  color: #1e293b;
+  margin: 0.75rem 0;
+  font-size: 0.8125rem;
+}
+
+.dark .lecture-prose .callout {
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  color: #e2e8f0;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .callout {
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+  }
+}
+
+.lecture-prose .callout.warning {
+  background-color: rgba(254, 243, 199, 0.7);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #78350f;
+}
+
+.dark .lecture-prose .callout.warning {
+  background-color: rgba(69, 26, 3, 0.4);
+  border-color: rgba(180, 83, 9, 0.6);
+  color: #fef3c7;
+}
+
+.lecture-prose .callout.danger {
+  background-color: rgba(254, 226, 226, 0.7);
+  border-color: rgba(239, 68, 68, 0.6);
+  color: #7f1d1d;
+}
+
+.dark .lecture-prose .callout.danger {
+  background-color: rgba(69, 10, 10, 0.4);
+  border-color: rgba(220, 38, 38, 0.6);
+  color: #fee2e2;
+}
+
+.lecture-prose .callout strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.lecture-prose .quote-block {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgba(6, 182, 212, 0.08);
+  border-left: 4px solid #0891b2;
+  margin: 0.75rem 0;
+  color: #1e293b;
+}
+
+.dark .lecture-prose .quote-block {
+  background-color: rgba(8, 51, 68, 0.3);
+  border-left: 4px solid #06b6d4;
+  color: #e2e8f0;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .quote-block {
+    padding: 1.25rem;
+    margin: 1rem 0;
+  }
+}
+
+.lecture-prose .quote-block strong {
+  display: block;
+  font-size: 0.9375rem;
+  color: #0891b2;
+  margin-bottom: 0.25rem;
+}
+
+.dark .lecture-prose .quote-block strong {
+  color: #38bdf8;
+}
+
+.lecture-prose dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose dl {
+    gap: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+  }
+}
+
+.lecture-prose dt {
+  font-weight: 600;
+  color: #0891b2;
+  font-family: monospace;
+}
+
+.dark .lecture-prose dt {
+  color: #22d3ee;
+}
+
+.lecture-prose dd {
+  color: #334155;
+}
+
+.dark .lecture-prose dd {
+  color: #cbd5e1;
+}
+
+/* Timeline component */
+.lecture-prose .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .timeline {
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.lecture-prose .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.dark .lecture-prose .timeline-item {
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .timeline-item {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.lecture-prose .timeline-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgba(6, 182, 212, 0.15);
+  color: #0891b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.dark .lecture-prose .timeline-icon {
+  color: #22d3ee;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .timeline-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.lecture-prose .timeline-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 0.2rem;
+}
+
+.dark .lecture-prose .timeline-content h3 {
+  color: #38bdf8;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .timeline-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.lecture-prose .timeline-content p {
+  color: #475569;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.dark .lecture-prose .timeline-content p {
+  color: #cbd5e1;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .timeline-content p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* Workflow steps */
+.lecture-prose .workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+  .lecture-prose .workflow {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+}
+
+.lecture-prose .workflow > div {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dark .lecture-prose .workflow > div {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+.lecture-prose .workflow b {
+  font-size: 1.25rem;
+  color: #0891b2;
+  font-family: monospace;
+}
+
+.dark .lecture-prose .workflow b {
+  color: #06b6d4;
+}
+
+.lecture-prose .workflow strong {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.dark .lecture-prose .workflow strong {
+  color: #f8fafc;
+}
+
+.lecture-prose .workflow span {
+  color: #64748b;
+  font-size: 0.8125rem;
+}
+
+.dark .lecture-prose .workflow span {
+  color: #94a3b8;
+}
+
+/* Activity Prompts */
+.lecture-prose .activity-prompts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.lecture-prose .activity-prompts span {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  font-size: 0.8125rem;
+  color: #1e293b;
+}
+
+.dark .lecture-prose .activity-prompts span {
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  color: #e2e8f0;
+}
+
+.lecture-prose .activity-prompts b {
+  color: #0284c7;
+  margin-right: 0.25rem;
+}
+
+.dark .lecture-prose .activity-prompts b {
+  color: #38bdf8;
+}
+
+.lecture-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  background-color: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  color: #0e7490;
+  font-size: 0.875em;
+}
+
+.dark .lecture-prose code {
+  background-color: rgba(30, 41, 59, 0.8);
+  border-color: transparent;
+  color: #38bdf8;
+}
+
+.lecture-prose pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #020617;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  overflow-x: auto;
+}
+
+.lecture-prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: #f8fafc;
+}
+
+.lecture-prose .social-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lecture-prose .social {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lecture-prose .social:hover {
+  opacity: 1;
+}
+
+/* Introduction Slide Author Card */
+.lecture-prose .intro-author-card {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dark .lecture-prose .intro-author-card {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.lecture-prose .intro-author-card .institution-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0891b2;
+}
+
+.dark .lecture-prose .intro-author-card .institution-badge {
+  color: #22d3ee;
+}
+
+.lecture-prose .intro-author-card .intro-tagline {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.dark .lecture-prose .intro-author-card .intro-tagline {
+  color: #94a3b8;
+}
+
+/* Presentation Guide & Navigation Controls Grid */
+.lecture-prose .controls-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .lecture-prose .controls-guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+.lecture-prose .guide-card {
+  padding: 0.875rem 1rem;
+  border-radius: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.dark .lecture-prose .guide-card {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+}
+
+.lecture-prose .guide-card:hover {
+  border-color: rgba(6, 182, 212, 0.6);
+  transform: translateY(-1px);
+}
+
+.dark .lecture-prose .guide-card:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.lecture-prose .guide-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.lecture-prose .guide-badge kbd {
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.375rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dark .lecture-prose .guide-badge kbd {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.lecture-prose .guide-badge .badge-tag {
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: #0891b2;
+}
+
+.dark .lecture-prose .guide-badge .badge-tag {
+  color: #22d3ee;
+}
+
+.lecture-prose .guide-card strong {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dark .lecture-prose .guide-card strong {
+  color: #f8fafc;
+}
+
+.lecture-prose .guide-card p {
+  font-size: 0.8125rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.dark .lecture-prose .guide-card p {
+  color: #94a3b8;
+}
+
+/* Hide Reveal.js speaker notes, duplicate caveats, eyebrows, and duplicate headers */
+aside.notes,
+.lecture-prose aside,
+.lecture-prose aside.notes,
+.lecture-prose .notes,
+.lecture-prose p.caveat,
+.lecture-prose p.eyebrow,
+.lecture-prose > h1:first-child,
+.lecture-prose > h2:first-child,
+.lecture-prose > h3:first-child {
+  display: none !important;
+}
+
+/* Custom scrollbar styling for high-end UI */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
