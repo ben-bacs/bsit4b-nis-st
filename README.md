@@ -84,3 +84,4 @@ This project includes a pre-configured GitHub Actions workflow in [`.github/work
 ## ⚖️ Academic Disclaimer & License
 
 This project is an authorized educational recreation created for study, revision, and accessibility enhancement purposes for CICT BSIT students at West Visayas State University. All lecture contents, syllabi, pedagogical structures, and presentation materials remain the intellectual property of **Prof. Mark Joseph J. Solidarios** and **WVSU CICT**.
+
