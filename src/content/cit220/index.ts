@@ -39,3 +39,4 @@ export const CIT220_COURSE: Course = {
   topics: CIT220_TOPICS,
   examCoverage: CIT220_EXAM_COVERAGE,
 };
+

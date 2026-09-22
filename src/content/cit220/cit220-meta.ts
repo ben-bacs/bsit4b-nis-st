@@ -99,3 +99,4 @@ export const CIT220_EXAM_COVERAGE = {
     'Review the NIST SP 800-207 Zero Trust Architecture pillars and why identity serves as the new perimeter.',
   ],
 };
+

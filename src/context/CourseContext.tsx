@@ -58,3 +58,4 @@ export const useCourse = (): CourseContextType => {
   }
   return context;
 };
+

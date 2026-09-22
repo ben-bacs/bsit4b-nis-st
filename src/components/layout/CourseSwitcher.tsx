@@ -141,3 +141,4 @@ export const CourseSwitcher: React.FC<CourseSwitcherProps> = ({ onCourseChange, 
     </div>
   );
 };
+
