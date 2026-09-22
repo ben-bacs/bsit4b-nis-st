@@ -5,11 +5,37 @@ import { TOPIC_04 } from './topics/topic-04';
 import { TOPIC_05 } from './topics/topic-05';
 import { Topic, Course, SearchResult } from '../types/content';
 import { COURSE_METADATA, MIDTERM_EXAM_COVERAGE, POST_MIDTERM_TOPICS } from './course-meta';
-import { CIT220_COURSE, CIT220_TOPICS, CIT220_METADATA, CIT220_EXAM_COVERAGE } from './cit220';
+import {
+  CIT220_COURSE,
+  CIT220_TOPICS,
+  CIT220_METADATA,
+  CIT220_EXAM_COVERAGE,
+  CIT220_REVIEWER_TOPICS,
+  CIT220_REVIEWER_QUESTIONS,
+  ReviewerItem,
+  ModifiedTrueFalseQuestion,
+  MultipleChoiceQuestion,
+  EnumerationQuestion,
+  ReviewerTopicMeta,
+  ReviewerQuestionType
+} from './cit220';
 
 export { TOPIC_01, TOPIC_02, TOPIC_03, TOPIC_04, TOPIC_05 };
 export { COURSE_METADATA, MIDTERM_EXAM_COVERAGE, POST_MIDTERM_TOPICS };
-export { CIT220_COURSE, CIT220_TOPICS, CIT220_METADATA, CIT220_EXAM_COVERAGE };
+export {
+  CIT220_COURSE,
+  CIT220_TOPICS,
+  CIT220_METADATA,
+  CIT220_EXAM_COVERAGE,
+  CIT220_REVIEWER_TOPICS,
+  CIT220_REVIEWER_QUESTIONS,
+  type ReviewerItem,
+  type ModifiedTrueFalseQuestion,
+  type MultipleChoiceQuestion,
+  type EnumerationQuestion,
+  type ReviewerTopicMeta,
+  type ReviewerQuestionType
+};
 
 // CIT 245 Course Topics
 export const CIT245_TOPICS: Topic[] = [

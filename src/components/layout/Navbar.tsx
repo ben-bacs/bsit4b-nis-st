@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Layers, Info, Menu, X, Calendar, Sun, Moon } from 'lucide-react';
+import { Search, Layers, Info, Menu, X, Calendar, Sun, Moon, Sparkles } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { useCourse } from '../../context/CourseContext';
 import { CourseSwitcher } from './CourseSwitcher';
@@ -107,6 +107,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
             </a>
 
             <a
+              href="#/reviewer"
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors ${
+                currentPath.startsWith('/reviewer')
+                  ? 'text-cyan-800 dark:text-cyan-300 bg-cyan-100/80 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800 font-semibold'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
+              }`}
+            >
+              <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+              <span>CIT 220 Reviewer</span>
+              <span className="text-[10px] px-1.5 py-0.2 rounded bg-cyan-600 text-white font-mono font-bold">
+                Exam
+              </span>
+            </a>
+
+            <a
               href="#/about"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors ${
                 currentPath.startsWith('/about')
@@ -183,6 +198,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
               className="px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900 font-medium"
             >
               Exam Coverage
+            </a>
+            <a
+              href="#/reviewer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-cyan-800 dark:text-cyan-300 bg-cyan-50 dark:bg-cyan-950/60 font-semibold"
+            >
+              <span className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+                <span>CIT 220 Reviewer</span>
+              </span>
+              <span className="text-[10px] px-1.5 py-0.2 rounded bg-cyan-600 text-white font-mono font-bold">
+                12 Topics
+              </span>
             </a>
             <a
               href="#/about"

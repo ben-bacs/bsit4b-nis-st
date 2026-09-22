@@ -6,9 +6,29 @@ import { TOPIC_03 } from './topics/unit-03';
 import { TOPIC_04 } from './topics/unit-04';
 import { Topic, Course } from '../../types/content';
 import { CIT220_METADATA, CIT220_EXAM_COVERAGE } from './cit220-meta';
+import {
+  CIT220_REVIEWER_TOPICS,
+  CIT220_REVIEWER_QUESTIONS,
+  ReviewerItem,
+  ModifiedTrueFalseQuestion,
+  MultipleChoiceQuestion,
+  EnumerationQuestion,
+  ReviewerTopicMeta,
+  ReviewerQuestionType
+} from './cit220-reviewer';
 
 export { TOPIC_01, TOPIC_02, TOPIC_02_1, TOPIC_02_2, TOPIC_03, TOPIC_04 };
 export { CIT220_METADATA, CIT220_EXAM_COVERAGE };
+export {
+  CIT220_REVIEWER_TOPICS,
+  CIT220_REVIEWER_QUESTIONS,
+  type ReviewerItem,
+  type ModifiedTrueFalseQuestion,
+  type MultipleChoiceQuestion,
+  type EnumerationQuestion,
+  type ReviewerTopicMeta,
+  type ReviewerQuestionType
+};
 
 export const CIT220_TOPICS: Topic[] = [
   TOPIC_01,

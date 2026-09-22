@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage';
 import { TopicPage } from './pages/TopicPage';
 import { AboutPage } from './pages/AboutPage';
 import { MidtermPage } from './pages/MidtermPage';
+import { ReviewerPage } from './pages/ReviewerPage';
 import { getTopicById, ALL_TOPICS } from './content';
 import { ThemeProvider } from './context/ThemeContext';
 import { CourseProvider, useCourse } from './context/CourseContext';
@@ -78,6 +79,8 @@ const AppContent: React.FC = () => {
     content = <AboutPage />;
   } else if (path.startsWith('/midterm')) {
     content = <MidtermPage onSelectTopic={handleSelectTopic} />;
+  } else if (path.startsWith('/reviewer')) {
+    content = <ReviewerPage />;
   }
 
   return (
