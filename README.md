@@ -75,8 +75,8 @@
 ### Installation & Run
 ```bash
 # Clone the repository
-git clone https://github.com/ben-bacs/wvsu-cit245-cyberforensics.git
-cd wvsu-cit245-cyberforensics
+git clone https://github.com/ben-bacs/bsit4b-nis-st.git
+cd bsit4b-nis-st
 
 # Install dependencies
 npm install
