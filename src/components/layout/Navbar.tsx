@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Search, Layers, Info, Menu, X, Calendar, Sun, Moon } from 'lucide-react';
-import { ALL_TOPICS } from '../../content';
 import { useTheme } from '../../context/ThemeContext';
+import { useCourse } from '../../context/CourseContext';
+import { CourseSwitcher } from './CourseSwitcher';
 
 interface NavbarProps {
   onOpenSearch: () => void;
@@ -11,34 +12,42 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { currentCourse } = useCourse();
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/90 dark:bg-slate-950/85 backdrop-blur-md transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Official WVSU CICT Logo & Brand */}
-          <a href="#/" className="flex items-center gap-3 group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700/80 p-1.5 shadow-md shadow-cyan-950/20 group-hover:border-cyan-500/60 transition-colors">
-              <img
-                src="./assets/wvsu-cict-emblem.svg"
-                alt="WVSU CICT Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-900 dark:text-white tracking-tight text-sm sm:text-base group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                  CIT 245 Cyberforensics
-                </span>
-                <span className="hidden xs:inline-block text-[10px] font-semibold tracking-wider px-1.5 py-0.2 rounded bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-400 border border-cyan-300 dark:border-cyan-800/60">
-                  CICT
-                </span>
+        <div className="flex items-center justify-between h-16 gap-3">
+          {/* Official BSIT 4B NIS/ST Brand & Course Switcher */}
+          <div className="flex items-center gap-3 shrink-0">
+            <a href="#/" className="flex items-center gap-3 group">
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-750 p-1.5 shadow-md shadow-cyan-950/20 group-hover:border-cyan-500/60 transition-colors">
+                <img
+                  src="./assets/wvsu-cict-emblem.svg"
+                  alt="WVSU CICT Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-none mt-0.5">
-                WVSU Main Campus • Iloilo City
-              </p>
+              <div className="hidden xs:block">
+                <div className="flex items-center gap-2">
+                  <span className="font-extrabold text-slate-900 dark:text-white tracking-tight text-sm sm:text-base group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                    BSIT 4B NIS/ST
+                  </span>
+                  <span className="text-[10px] font-bold tracking-wider px-1.5 py-0.2 rounded bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-400 border border-cyan-300 dark:border-cyan-800/60">
+                    CICT
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-none mt-0.5">
+                  WVSU Main Campus • Iloilo
+                </p>
+              </div>
+            </a>
+
+            {/* Course Switcher Pill */}
+            <div className="hidden sm:block">
+              <CourseSwitcher />
             </div>
-          </a>
+          </div>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
@@ -53,21 +62,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
               Course Overview
             </a>
 
-            {/* Topics Dropdown */}
+            {/* Topics Dropdown for Current Course */}
             <div className="relative group">
               <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-colors">
                 <Layers className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-                <span>Topics</span>
+                <span>{currentCourse.code} Topics</span>
               </button>
-              <div className="absolute left-0 mt-1 w-72 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-2 hidden group-hover:block transition-all z-50">
-                {ALL_TOPICS.map((t) => (
+              <div className="absolute left-0 mt-1 w-80 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-2 hidden group-hover:block transition-all z-50">
+                <div className="px-3 py-1.5 border-b border-slate-100 dark:border-slate-800 mb-1">
+                  <span className="text-[10px] uppercase font-bold text-slate-500">
+                    {currentCourse.title}
+                  </span>
+                </div>
+                {currentCourse.topics.map((t) => (
                   <a
                     key={t.id}
                     href={`#/topic/${t.id}`}
                     className="flex flex-col p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-colors group/item"
                   >
                     <div className="flex items-center justify-between text-xs font-semibold text-cyan-700 dark:text-cyan-400">
-                      <span>Topic {t.topicNumber}</span>
+                      <span>Unit / Topic {t.topicNumber}</span>
                       <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
                         {t.totalSlides} slides
                       </span>
@@ -127,7 +141,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
               title="Search curriculum (Ctrl+K)"
             >
               <Search className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-              <span className="hidden sm:inline">Search lecture...</span>
+              <span className="hidden sm:inline">Search courses...</span>
               <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 rounded border border-slate-300 dark:border-slate-700">
                 Ctrl K
               </kbd>
@@ -147,6 +161,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 space-y-3">
+          {/* Mobile Course Switcher */}
+          <div className="pb-3 border-b border-slate-100 dark:border-slate-800">
+            <span className="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+              Select Course
+            </span>
+            <CourseSwitcher onCourseChange={() => setMobileMenuOpen(false)} />
+          </div>
+
           <div className="flex flex-col space-y-1">
             <a
               href="#/"
@@ -160,7 +182,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900 font-medium"
             >
-              Midterm Exam Coverage
+              Exam Coverage
             </a>
             <a
               href="#/about"
@@ -198,17 +220,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
 
           <div className="pt-3 border-t border-slate-200 dark:border-slate-800">
             <p className="px-3 text-xs font-semibold uppercase tracking-wider text-cyan-700 dark:text-cyan-400 mb-2">
-              Topics
+              {currentCourse.code} Topics ({currentCourse.topics.length})
             </p>
             <div className="space-y-1">
-              {ALL_TOPICS.map((t) => (
+              {currentCourse.topics.map((t) => (
                 <a
                   key={t.id}
                   href={`#/topic/${t.id}`}
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900"
                 >
-                  <span className="truncate">Topic {t.topicNumber}: {t.title}</span>
+                  <span className="truncate">Unit {t.topicNumber}: {t.title}</span>
                   <span className="text-xs text-slate-500 font-mono">{t.totalSlides} slides</span>
                 </a>
               ))}
@@ -219,4 +241,3 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch, currentPath }) => 
     </header>
   );
 };
-

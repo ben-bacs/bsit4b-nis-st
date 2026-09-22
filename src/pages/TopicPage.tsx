@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Topic } from '../types/content';
-import { ALL_TOPICS } from '../content';
+import { ALL_COURSES } from '../content';
+import { useCourse } from '../context/CourseContext';
 import { Breadcrumbs } from '../components/layout/Breadcrumbs';
 import { TableOfContents } from '../components/navigation/TableOfContents';
 import { TopicNav } from '../components/navigation/TopicNav';
@@ -24,11 +25,16 @@ export const TopicPage: React.FC<TopicPageProps> = ({
 }) => {
   const [mode, setMode] = useState<'reader' | 'slides'>(initialMode);
   const [activeSectionId, setActiveSectionId] = useState(topic.sections[0]?.id || '');
+  const { currentCourse } = useCourse();
 
-  // Calculate prev and next topics
-  const currentIdx = ALL_TOPICS.findIndex((t) => t.id === topic.id);
-  const prevTopic = currentIdx > 0 ? ALL_TOPICS[currentIdx - 1] : undefined;
-  const nextTopic = currentIdx < ALL_TOPICS.length - 1 ? ALL_TOPICS[currentIdx + 1] : undefined;
+  // Find the course that owns this topic
+  const courseOfTopic = ALL_COURSES.find((c) => c.topics.some((t) => t.id === topic.id)) || currentCourse;
+  const courseTopics = courseOfTopic.topics;
+
+  // Calculate prev and next topics within this course
+  const currentIdx = courseTopics.findIndex((t) => t.id === topic.id);
+  const prevTopic = currentIdx > 0 ? courseTopics[currentIdx - 1] : undefined;
+  const nextTopic = currentIdx < courseTopics.length - 1 ? courseTopics[currentIdx + 1] : undefined;
 
   useEffect(() => {
     setMode(initialMode);
@@ -56,8 +62,8 @@ export const TopicPage: React.FC<TopicPageProps> = ({
       {/* Breadcrumbs Navigation */}
       <Breadcrumbs
         items={[
-          { label: 'CIT 245', href: '#/' },
-          { label: `Topic ${topic.topicNumber}: ${topic.title}`, current: true },
+          { label: courseOfTopic.code, href: '#/' },
+          { label: `Unit ${topic.topicNumber}: ${topic.title}`, current: true },
         ]}
         backHref="#/"
         backLabel="Course Overview"

@@ -8,10 +8,12 @@ import { AboutPage } from './pages/AboutPage';
 import { MidtermPage } from './pages/MidtermPage';
 import { getTopicById, ALL_TOPICS } from './content';
 import { ThemeProvider } from './context/ThemeContext';
+import { CourseProvider, useCourse } from './context/CourseContext';
 
 const AppContent: React.FC = () => {
   const [currentHash, setCurrentHash] = useState(window.location.hash || '#/');
   const [searchOpen, setSearchOpen] = useState(false);
+  const { currentCourse } = useCourse();
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -63,7 +65,7 @@ const AppContent: React.FC = () => {
 
   if (path.startsWith('/topic/')) {
     const topicId = path.replace('/topic/', '');
-    const topic = getTopicById(topicId) || ALL_TOPICS[0];
+    const topic = getTopicById(topicId) || currentCourse.topics[0] || ALL_TOPICS[0];
     content = (
       <TopicPage
         topic={topic}
@@ -104,7 +106,9 @@ const AppContent: React.FC = () => {
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <AppContent />
+      <CourseProvider>
+        <AppContent />
+      </CourseProvider>
     </ThemeProvider>
   );
 };

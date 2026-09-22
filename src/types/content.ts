@@ -1,4 +1,4 @@
-﻿export interface CourseMetadata {
+export interface CourseMetadata {
   code: string;
   title: string;
   subtitle: string;
@@ -76,7 +76,33 @@ export interface Topic {
   totalSlides: number;
 }
 
+export interface Course {
+  id: string; // 'cit245' | 'cit220'
+  code: string; // 'CIT 245' | 'CIT 220'
+  title: string; // 'Cyberforensics' | 'Information Assurance and Security 2'
+  shortTitle: string; // 'Cyberforensics' | 'IAS 2'
+  semester: string;
+  institution: string;
+  college: string;
+  campus: string;
+  badge: string;
+  description: string;
+  instructor: {
+    name: string;
+    title?: string;
+    role?: string;
+    email?: string;
+    github?: string;
+    facebook?: string;
+    twitter?: string;
+  };
+  topics: Topic[];
+  examCoverage?: any;
+}
+
 export interface SearchResult {
+  courseId?: string;
+  courseCode?: string;
   topicId: string;
   topicTitle: string;
   topicNumber: string;

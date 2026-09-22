@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, User, GraduationCap } from 'lucide-react';
+import { ExternalLink, User, GraduationCap, Shield } from 'lucide-react';
 import { COURSE_METADATA } from '../../content';
 
 export const Footer: React.FC = () => {
@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         {/* Course Info & Official WVSU CICT Logo */}
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700/80 p-1 flex items-center justify-center shrink-0 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700/80 p-1 flex items-center justify-center shrink-0 shadow-xs">
               <img
                 src="./assets/wvsu-cict-emblem.svg"
                 alt="WVSU CICT Emblem"
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h3 className="font-bold text-slate-900 dark:text-white text-sm">
-                {COURSE_METADATA.code} — {COURSE_METADATA.title}
+                BSIT 4B NIS/ST Courseware Hub
               </h3>
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
                 WVSU CICT Main Campus • Iloilo City
@@ -26,18 +26,12 @@ export const Footer: React.FC = () => {
             </div>
           </div>
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Academic recreation of the lecture courseware for study and reference.
+            Academic courseware platform for Network & Information Security / Software Technologies, providing interactive lecture slides and study guides.
           </p>
-          <div className="pt-1">
-            <a
-              href={COURSE_METADATA.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors font-medium"
-            >
-              <span>Canonical Lecture Website</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
+          <div className="pt-1 flex flex-col gap-1 text-xs">
+            <span className="font-semibold text-slate-700 dark:text-slate-300">Active Curriculum:</span>
+            <span className="text-slate-500 dark:text-slate-400">• CIT 245: Cyberforensics (Prof. Mark Joseph J. Solidarios)</span>
+            <span className="text-slate-500 dark:text-slate-400">• CIT 220: IAS 2 (Prof. Chin Ann Feliprada)</span>
           </div>
         </div>
 
@@ -45,14 +39,20 @@ export const Footer: React.FC = () => {
         <div className="space-y-2.5 p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-xs">
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200">
             <GraduationCap className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
-            <span>Course Material Authorship</span>
+            <span>Faculty Instructors & Course Authors</span>
           </div>
-          <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-            Original lecture curriculum by <strong className="text-slate-950 dark:text-white">{COURSE_METADATA.originalInstructor.name}</strong>,{' '}
-            {COURSE_METADATA.college}, {COURSE_METADATA.institution}.
-          </p>
-          <p className="text-[11px] text-slate-500">
-            Authorized academic recreation for educational/school purposes. Not an official production portal of WVSU.
+          <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div>
+              <strong className="text-slate-950 dark:text-white">Prof. Mark Joseph J. Solidarios</strong>
+              <p className="text-[11px] text-slate-500">Instructor for CIT 245 Cyberforensics • WVSU CICT</p>
+            </div>
+            <div>
+              <strong className="text-slate-950 dark:text-white">Prof. Chin Ann Feliprada</strong>
+              <p className="text-[11px] text-slate-500">Instructor for CIT 220 IAS 2 • WVSU CICT</p>
+            </div>
+          </div>
+          <p className="text-[10px] text-slate-500 pt-1">
+            Authorized academic recreation for study and research. Intellectual property belongs to respective course instructors and WVSU CICT.
           </p>
         </div>
 
@@ -60,17 +60,17 @@ export const Footer: React.FC = () => {
         <div className="space-y-2.5 p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 shadow-xs">
           <div className="flex items-center gap-2 text-xs font-semibold text-cyan-600 dark:text-cyan-400">
             <User className="w-4 h-4" />
-            <span>Application Developer</span>
+            <span>Application Developer & Architect</span>
           </div>
           <div className="text-xs text-slate-600 dark:text-slate-300 space-y-0.5">
             <p className="font-semibold text-slate-950 dark:text-white">
-              {COURSE_METADATA.studentDeveloper.name}
+              Benedict Neil D. Bacud
             </p>
             <p className="text-slate-500 dark:text-slate-400">
-              {COURSE_METADATA.studentDeveloper.section}
+              BSIT 4B NIS/ST
             </p>
             <p className="text-[11px] text-slate-500 italic">
-              {COURSE_METADATA.studentDeveloper.role}
+              Platform Engineering, Full-Stack Architecture & Content Curation
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>
-          &copy; {new Date().getFullYear()} CIT 245 Cyberforensics. Course material property of the instructor & WVSU CICT.
+          &copy; {new Date().getFullYear()} BSIT 4B NIS/ST • West Visayas State University College of ICT.
         </p>
         <div className="flex items-center gap-4">
           <a href="#/about" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
           </a>
           <span>•</span>
           <a href="#/" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
-            All Topics
+            Course Overview
           </a>
         </div>
       </div>

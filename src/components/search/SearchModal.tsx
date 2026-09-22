@@ -133,8 +133,13 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
 
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                    {res.courseCode && (
+                      <span className="px-1.5 py-0.2 rounded bg-cyan-100 dark:bg-cyan-950 text-cyan-800 dark:text-cyan-400 font-bold">
+                        {res.courseCode}
+                      </span>
+                    )}
                     <span className="text-cyan-700 dark:text-cyan-400 font-semibold">
-                      Topic {res.topicNumber}
+                      Unit {res.topicNumber}
                     </span>
                     <span>•</span>
                     <span className="truncate">{res.sectionTitle}</span>
