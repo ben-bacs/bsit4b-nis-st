@@ -688,3 +688,4 @@ const EnumerationCard: React.FC<EnumCardProps> = ({
     </div>
   );
 };
+
