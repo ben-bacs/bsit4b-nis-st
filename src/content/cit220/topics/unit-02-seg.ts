@@ -98,17 +98,31 @@ export const TOPIC_02_2: Topic = {
           {
             "id": "slide-6",
             "slideNumber": 6,
-            "title": "Network Segmentation & Microsegmentation - Slide 6",
+            "title": "Microsegmentation vs. Traditional Network Segmentation",
             "eyebrow": "CIT 220 • Unit 02.2",
             "subtitle": "The East-West Traffic Problem in Data Centers",
-            "lead": "Key conceptual lecture material.",
+            "lead": "A direct comparison across architectural scope, traffic focus, enforcement mechanisms, and Zero Trust alignment.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Network Segmentation &amp; Microsegmentation - Slide 6</h3>",
-            "cleanText": "Network Segmentation & Microsegmentation - Slide 6",
+            "rawHtml": "<h3>Microsegmentation vs. Traditional Network Segmentation</h3><p class=\"lead-statement\">A direct comparison across architectural scope, traffic focus, enforcement mechanisms, and Zero Trust alignment.</p><div class=\"info-card mt-3\"><p><strong>Architectural Paradigm Shift:</strong> Traditional segmentation treats the internal network as trusted once past the perimeter firewall. Microsegmentation eliminates internal implicit trust by enforcing security at each individual workload boundary.</p></div>",
+            "cleanText": "Microsegmentation vs. Traditional Network Segmentation A direct comparison across architectural scope, traffic focus, enforcement mechanisms, and Zero Trust alignment. Architectural Paradigm Shift: Traditional segmentation treats the internal network as trusted once past the perimeter firewall. Microsegmentation eliminates internal implicit trust by enforcing security at each individual workload boundary.",
             "codeSnippets": [],
-            "tables": [],
-            "images": []
+            "tables": [
+              {
+                "headers": ["Feature / Dimension", "Traditional Network Segmentation", "Microsegmentation"],
+                "rows": [
+                  ["Scope", "Broad network zones, subnets, and VLANs", "Granular, individual workloads, containers, and processes"],
+                  ["Traffic Focus", "North-South (perimeter ingress and egress)", "East-West (lateral server-to-server communications)"],
+                  ["Enforcement Point", "Centralized hardware firewalls, routers, and switches", "Distributed host-level agents, hypervisors, and service meshes"],
+                  ["Policy Criteria", "Static IP addresses, subnets, and port numbers", "Application identities, cryptographic tags, and environment labels"],
+                  ["Operational Agility", "Manual rule updates, slow deployment, prone to firewall rule sprawl", "Automated, policy-as-code synchronized with container lifecycles"],
+                  ["Zero Trust Fit", "Perimeter-centric; leaves internal lateral paths vulnerable", "Fundamental core building block for Zero Trust Architecture"]
+                ]
+              }
+            ],
+            "images": [
+              "/assets/microseg-vs-traditional-table.jpg"
+            ]
           },
           {
             "id": "slide-7",

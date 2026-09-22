@@ -128,17 +128,19 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-8",
             "slideNumber": 8,
-            "title": "Lorem ipsum dolor sit amet, consectetur",
+            "title": "Aligning Enterprise Architecture with Enterprise Security Architecture (TOGAF & SABSA)",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Core Security Principles & Beyond CIA Triad",
-            "lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "lead": "Integrating business security requirements into every phase of the TOGAF Architecture Development Method (ADM) using SABSA's layered matrix.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Lorem ipsum dolor sit amet, consectetur</h3><p class=\"lead-statement\">adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p><div class=\"info-card mt-3\"><p>aliqua. . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . Information Assurance and Security 2 05/15</p></div>",
-            "cleanText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. . Information Assurance and Security 2 05/15",
+            "rawHtml": "<h3>Aligning Enterprise Architecture with Enterprise Security Architecture (TOGAF &amp; SABSA)</h3><p class=\"lead-statement\">Integrating business security requirements into every phase of the TOGAF Architecture Development Method (ADM) using SABSA's layered matrix.</p><div class=\"info-card mt-3\"><p><strong>TOGAF ADM &amp; SABSA Integration:</strong> Enterprise Architecture (EA) defines the structure and operation of an organization, while Enterprise Security Architecture (ESA) ensures security is seamlessly integrated rather than treated as an afterthought.</p><ul class=\"compact mt-2\"><li><strong>Preliminary &amp; Vision (Phases A-B):</strong> Aligns business drivers and governance with the SABSA <em>Contextual</em> (Business Requirements) and <em>Conceptual</em> (Strategy/Principles) architectures.</li><li><strong>Information &amp; Technology (Phases C-D):</strong> Translates business requirements into SABSA <em>Logical</em> (Security Services/Policies) and <em>Physical</em> (Security Mechanisms) architectures.</li><li><strong>Solutions &amp; Implementation (Phases E-G):</strong> Establishes SABSA <em>Component</em> architectures (tools, standards, configurations) and migration safeguards.</li><li><strong>Governance &amp; Change Management (Phase H):</strong> Ensures ongoing SABSA <em>Operational</em> security monitoring, audit trails, and risk assurance across the enterprise.</li></ul></div>",
+            "cleanText": "Aligning Enterprise Architecture with Enterprise Security Architecture (TOGAF & SABSA) Integrating business security requirements into every phase of the TOGAF Architecture Development Method (ADM) using SABSA's layered matrix. TOGAF ADM & SABSA Integration: Enterprise Architecture (EA) defines the structure and operation of an organization, while Enterprise Security Architecture (ESA) ensures security is seamlessly integrated rather than treated as an afterthought. - Preliminary & Vision (Phases A-B): Aligns business drivers and governance with the SABSA Contextual (Business Requirements) and Conceptual (Strategy/Principles) architectures. - Information & Technology (Phases C-D): Translates business requirements into SABSA Logical (Security Services/Policies) and Physical (Security Mechanisms) architectures. - Solutions & Implementation (Phases E-G): Establishes SABSA Component architectures (tools, standards, configurations) and migration safeguards. - Governance & Change Management (Phase H): Ensures ongoing SABSA Operational security monitoring, audit trails, and risk assurance across the enterprise.",
             "codeSnippets": [],
             "tables": [],
-            "images": []
+            "images": [
+              "/assets/togaf-sabsa-alignment.jpg"
+            ]
           },
           {
             "id": "slide-9",
@@ -196,17 +198,19 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-12",
             "slideNumber": 12,
-            "title": "Foundations of Advanced Security - Slide 12",
+            "title": "Integrated Enterprise Architecture Ecosystem",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Enterprise Security Architecture Frameworks",
-            "lead": "06/15",
+            "lead": "Enterprise Security Architecture acts as the foundational layer connecting Business, Information, Application, and Technology architectures.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Foundations of Advanced Security - Slide 12</h3>",
-            "cleanText": "06/15",
+            "rawHtml": "<h3>Integrated Enterprise Architecture Ecosystem</h3><p class=\"lead-statement\">Enterprise Security Architecture acts as the foundational layer connecting Business, Information, Application, and Technology architectures.</p><div class=\"info-card mt-3\"><p><strong>The Four Pillars of Enterprise Architecture with ESA Governance:</strong></p><ul class=\"compact mt-2\"><li><strong>Business Architecture:</strong> Defines organizational strategy, governance, business functions, and key processes that require protection and compliance.</li><li><strong>Data / Information Architecture:</strong> Catalogs data assets, classification levels, regulatory compliance (e.g., GDPR, HIPAA), and data lifecycle security.</li><li><strong>Application Architecture:</strong> Structures software services, interfaces, identity federation, and secure application communication flows.</li><li><strong>Technology Architecture:</strong> Governs hardware, networks, cloud platforms, operating systems, and physical infrastructure.</li><li><strong>Enterprise Security Architecture (ESA):</strong> Weaves security policies, threat modeling, cryptographic controls, and monitoring across all four pillars simultaneously.</li></ul></div>",
+            "cleanText": "Integrated Enterprise Architecture Ecosystem Enterprise Security Architecture acts as the foundational layer connecting Business, Information, Application, and Technology architectures. The Four Pillars of Enterprise Architecture with ESA Governance: - Business Architecture: Defines organizational strategy, governance, business functions, and key processes that require protection and compliance. - Data / Information Architecture: Catalogs data assets, classification levels, regulatory compliance (e.g., GDPR, HIPAA), and data lifecycle security. - Application Architecture: Structures software services, interfaces, identity federation, and secure application communication flows. - Technology Architecture: Governs hardware, networks, cloud platforms, operating systems, and physical infrastructure. - Enterprise Security Architecture (ESA): Weaves security policies, threat modeling, cryptographic controls, and monitoring across all four pillars simultaneously.",
             "codeSnippets": [],
             "tables": [],
-            "images": []
+            "images": [
+              "/assets/enterprise-architecture-ecosystem.jpg"
+            ]
           },
           {
             "id": "slide-13",
@@ -482,17 +486,19 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-30",
             "slideNumber": 30,
-            "title": "Foundations of Advanced Security - Slide 30",
+            "title": "IT Security Frameworks, Standards, and Regulations Landscape",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Risk Management Lifecycle & Frameworks",
-            "lead": "12/15",
+            "lead": "A comprehensive taxonomy of authoritative security benchmarks, compliance standards, and regulatory frameworks.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Foundations of Advanced Security - Slide 30</h3>",
-            "cleanText": "12/15",
+            "rawHtml": "<h3>IT Security Frameworks, Standards, and Regulations Landscape</h3><p class=\"lead-statement\">A comprehensive taxonomy of authoritative security benchmarks, compliance standards, and regulatory frameworks governing enterprise security.</p><div class=\"info-card mt-3\"><p><strong>Key Frameworks and Regulations:</strong></p><ul class=\"compact mt-2\"><li><strong>CIS (Center for Internet Security):</strong> Actionable, prioritized controls and system hardening benchmarks to thwart common cyber threats.</li><li><strong>COBIT &amp; COSO:</strong> Frameworks for enterprise IT governance, internal controls, and enterprise risk management alignment with business goals.</li><li><strong>FISMA &amp; FedRAMP:</strong> Mandatory United States federal information security standards for government agencies and cloud service providers.</li><li><strong>GDPR (General Data Protection Regulation):</strong> Stringent European Union privacy mandate enforcing data protection and individual rights.</li><li><strong>HITRUST CSF:</strong> Prescriptive cybersecurity and compliance framework built specifically for the healthcare and life sciences sectors.</li><li><strong>ISO/IEC 27000 Series:</strong> Globally accredited standards defining requirements for an Information Security Management System (ISMS).</li><li><strong>NERC CIP:</strong> Mandatory standards protecting critical infrastructure assets within the North American bulk electric power grid.</li><li><strong>NIST Cybersecurity Framework (CSF) &amp; SP 800-Series:</strong> Guidelines for managing cybersecurity risks and protecting sensitive federal systems.</li></ul></div>",
+            "cleanText": "IT Security Frameworks, Standards, and Regulations Landscape A comprehensive taxonomy of authoritative security benchmarks, compliance standards, and regulatory frameworks governing enterprise security. Key Frameworks and Regulations: - CIS (Center for Internet Security): Actionable, prioritized controls and system hardening benchmarks to thwart common cyber threats. - COBIT & COSO: Frameworks for enterprise IT governance, internal controls, and enterprise risk management alignment with business goals. - FISMA & FedRAMP: Mandatory United States federal information security standards for government agencies and cloud service providers. - GDPR (General Data Protection Regulation): Stringent European Union privacy mandate enforcing data protection and individual rights. - HITRUST CSF: Prescriptive cybersecurity and compliance framework built specifically for the healthcare and life sciences sectors. - ISO/IEC 27000 Series: Globally accredited standards defining requirements for an Information Security Management System (ISMS). - NERC CIP: Mandatory standards protecting critical infrastructure assets within the North American bulk electric power grid. - NIST Cybersecurity Framework (CSF) & SP 800-Series: Guidelines for managing cybersecurity risks and protecting sensitive federal systems.",
             "codeSnippets": [],
             "tables": [],
-            "images": []
+            "images": [
+              "/assets/it-security-frameworks-overview.jpg"
+            ]
           },
           {
             "id": "slide-31",
@@ -527,17 +533,19 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-33",
             "slideNumber": 33,
-            "title": "Foundations of Advanced Security - Slide 33",
+            "title": "Essential Cybersecurity Frameworks Comparison Matrix",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Risk Management Lifecycle & Frameworks",
-            "lead": "12/15",
+            "lead": "Comparative evaluation of NIST CSF, ISO/IEC 27001, CIS Controls, and COBIT for enterprise security posture.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Foundations of Advanced Security - Slide 33</h3>",
-            "cleanText": "12/15",
+            "rawHtml": "<h3>Essential Cybersecurity Frameworks Comparison Matrix</h3><p class=\"lead-statement\">Comparative evaluation of NIST CSF, ISO/IEC 27001, CIS Controls, and COBIT for enterprise security posture.</p><div class=\"info-card mt-3\"><p><strong>Framework Profiles:</strong></p><ul class=\"compact mt-2\"><li><strong>NIST CSF:</strong> Organizes security activities around five continuous functions: <em>Identify, Protect, Detect, Respond, Recover</em>. Flexible, outcomes-driven, and widely adopted across both private enterprises and government sectors.</li><li><strong>ISO/IEC 27001:</strong> Internationally auditable standard specifying the requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS).</li><li><strong>CIS Critical Security Controls:</strong> A prioritized set of 18 actionable cyber defense controls designed to mitigate 85%+ of prevalent network and system attack vectors.</li><li><strong>COBIT:</strong> Focuses on strategic governance and alignment between enterprise IT operations and overall corporate business objectives.</li></ul></div>",
+            "cleanText": "Essential Cybersecurity Frameworks Comparison Matrix Comparative evaluation of NIST CSF, ISO/IEC 27001, CIS Controls, and COBIT for enterprise security posture. Framework Profiles: - NIST CSF: Organizes security activities around five continuous functions: Identify, Protect, Detect, Respond, Recover. Flexible, outcomes-driven, and widely adopted across both private enterprises and government sectors. - ISO/IEC 27001: Internationally auditable standard specifying the requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). - CIS Critical Security Controls: A prioritized set of 18 actionable cyber defense controls designed to mitigate 85%+ of prevalent network and system attack vectors. - COBIT: Focuses on strategic governance and alignment between enterprise IT operations and overall corporate business objectives.",
             "codeSnippets": [],
             "tables": [],
-            "images": []
+            "images": [
+              "/assets/essential-cybersecurity-frameworks.jpg"
+            ]
           },
           {
             "id": "slide-34",
@@ -557,14 +565,14 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-35",
             "slideNumber": 35,
-            "title": "Studio Shodwe",
+            "title": "Enterprise Security Best Practices",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Risk Management Lifecycle & Frameworks",
-            "lead": "Studio Shodwe 06/15 www.reallygreatsite.com",
+            "lead": "Four foundational defensive pillars essential for protecting enterprise infrastructure and mitigating risks.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Studio Shodwe</h3><p class=\"lead-statement\">06/15 www.reallygreatsite.com</p><div class=\"info-card mt-3\"><p>BEST  PRACTICES Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Strong Passwords Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Employee Training Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Access Control Regular Backups</p></div>",
-            "cleanText": "Studio Shodwe 06/15 www.reallygreatsite.com BEST  PRACTICES Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Strong Passwords Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Employee Training Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Access Control Regular Backups",
+            "rawHtml": "<h3>Enterprise Security Best Practices</h3><p class=\"lead-statement\">Four foundational defensive pillars essential for protecting enterprise infrastructure and mitigating risks.</p><div class=\"info-card mt-3\"><ul class=\"compact\"><li><strong>1. Strong Passwords &amp; Multi-Factor Authentication (MFA):</strong> Mandate complex passphrases and hardware/app-based MFA for all user accounts and administrative interfaces, drastically reducing credential stuffing vulnerabilities.</li><li><strong>2. Employee Security Awareness Training:</strong> Continuously train staff through interactive workshops and regular phishing simulations, transforming employees from potential attack vectors into human firewalls.</li><li><strong>3. Access Control &amp; Least Privilege:</strong> Enforce strict Role-Based Access Control (RBAC) and the Principle of Least Privilege (PoLP), ensuring identities only access resources essential to their direct business functions.</li><li><strong>4. Regular Backups &amp; Disaster Recovery:</strong> Implement the 3-2-1 backup strategy with encrypted, immutable, and offsite copies, coupled with periodic restoration drills to guarantee rapid recovery from ransomware and outages.</li></ul></div>",
+            "cleanText": "Enterprise Security Best Practices Four foundational defensive pillars essential for protecting enterprise infrastructure and mitigating risks. - 1. Strong Passwords & Multi-Factor Authentication (MFA): Mandate complex passphrases and hardware/app-based MFA for all user accounts and administrative interfaces, drastically reducing credential stuffing vulnerabilities. - 2. Employee Security Awareness Training: Continuously train staff through interactive workshops and regular phishing simulations, transforming employees from potential attack vectors into human firewalls. - 3. Access Control & Least Privilege: Enforce strict Role-Based Access Control (RBAC) and the Principle of Least Privilege (PoLP), ensuring identities only access resources essential to their direct business functions. - 4. Regular Backups & Disaster Recovery: Implement the 3-2-1 backup strategy with encrypted, immutable, and offsite copies, coupled with periodic restoration drills to guarantee rapid recovery from ransomware and outages.",
             "codeSnippets": [],
             "tables": [],
             "images": []
@@ -700,14 +708,14 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-44",
             "slideNumber": 44,
-            "title": "Foundations of Advanced Security - Slide 44",
+            "title": "Bridging Threat Intelligence & Compliance Gap Analysis",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Threat Intelligence & Advanced Persistent Threats",
-            "lead": "12/15",
+            "lead": "Transitioning from threat identification and modeling to operational compliance benchmarking.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<h3>Foundations of Advanced Security - Slide 44</h3>",
-            "cleanText": "12/15",
+            "rawHtml": "<h3>Bridging Threat Intelligence &amp; Compliance Gap Analysis</h3><p class=\"lead-statement\">Transitioning from threat identification and modeling to operational compliance benchmarking.</p><div class=\"info-card mt-3\"><p>While threat intelligence identifies potential adversaries and their Tactics, Techniques, and Procedures (TTPs), a <strong>Compliance Gap Analysis</strong> verifies whether existing controls, policies, and safeguards satisfy regulatory requirements and operational mandates.</p><ul class=\"compact mt-2\"><li><strong>Objective:</strong> Compare the organization's current security posture against targeted standards (such as HIPAA, ISO 27001, or NIST CSF).</li><li><strong>Outcome:</strong> A prioritized roadmap detailing technical vulnerabilities, procedural gaps, and remediation actions necessary to achieve full compliance and operational resilience.</li></ul></div>",
+            "cleanText": "Bridging Threat Intelligence & Compliance Gap Analysis Transitioning from threat identification and modeling to operational compliance benchmarking. While threat intelligence identifies potential adversaries and their Tactics, Techniques, and Procedures (TTPs), a Compliance Gap Analysis verifies whether existing controls, policies, and safeguards satisfy regulatory requirements and operational mandates. - Objective: Compare the organization's current security posture against targeted standards (such as HIPAA, ISO 27001, or NIST CSF). - Outcome: A prioritized roadmap detailing technical vulnerabilities, procedural gaps, and remediation actions necessary to achieve full compliance and operational resilience.",
             "codeSnippets": [],
             "tables": [],
             "images": []
@@ -888,14 +896,14 @@ export const TOPIC_01: Topic = {
           {
             "id": "slide-56",
             "slideNumber": 56,
-            "title": "Foundations of Advanced Security - Slide 56",
+            "title": "Unit 01 Conclusion: Foundations of Advanced Security",
             "eyebrow": "CIT 220 • Unit 01",
             "subtitle": "Compliance Gap Analysis & Regulatory Case Study",
-            "lead": "Key conceptual lecture material.",
+            "lead": "Comprehensive synthesis of enterprise architecture, threat modeling, cybersecurity frameworks, and compliance gap analysis.",
             "isTitleSlide": false,
             "isSectionDivider": false,
-            "rawHtml": "<div class=\"intro-author-card\"><div class=\"institution-badge\"><span>West Visayas State University • CICT Main Campus, Iloilo City</span></div><h2>Thank You!</h2><p class=\"intro-tagline\">CIT 220 Information Assurance and Security 2 • Unit 01 Complete</p><p class=\"mt-4 text-xs text-slate-500 dark:text-slate-400\">Curriculum instruction by Prof. Chin Ann Feliprada • WVSU CICT</p></div>",
-            "cleanText": "Foundations of Advanced Security - Slide 56",
+            "rawHtml": "<div class=\"intro-author-card\"><div class=\"institution-badge\"><span>West Visayas State University • CICT Main Campus, Iloilo City</span></div><h2>Unit 01 Complete: Foundations of Advanced Security</h2><p class=\"intro-tagline\">CIT 220 Information Assurance and Security 2</p><div class=\"info-card text-left mt-4 text-xs\"><p><strong>Key Milestones Covered:</strong></p><ul class=\"compact mt-1\"><li>Core Security Principles: CIA Triad, Authentication, Authorization, and Non-Repudiation.</li><li>Enterprise Security Architecture (ESA): Aligning business objectives with SABSA and TOGAF ADM.</li><li>Threat Modeling &amp; Analysis: STRIDE methodology and mitigating Advanced Persistent Threats (APTs).</li><li>Risk Management &amp; Frameworks: NIST CSF, ISO/IEC 27000, CIS Controls, COBIT, and best practices.</li><li>Compliance Gap Analysis: Five-step structured process and healthcare clinic regulatory case study.</li></ul></div><p class=\"mt-4 text-xs text-slate-500 dark:text-slate-400\">Curriculum instruction by Prof. Chin Ann Feliprada • WVSU CICT</p></div>",
+            "cleanText": "Unit 01 Conclusion: Foundations of Advanced Security Comprehensive synthesis of enterprise architecture, threat modeling, cybersecurity frameworks, and compliance gap analysis. Key Milestones Covered: - Core Security Principles: CIA Triad, Authentication, Authorization, and Non-Repudiation. - Enterprise Security Architecture (ESA): Aligning business objectives with SABSA and TOGAF ADM. - Threat Modeling & Analysis: STRIDE methodology and mitigating Advanced Persistent Threats (APTs). - Risk Management & Frameworks: NIST CSF, ISO/IEC 27000, CIS Controls, COBIT, and best practices. - Compliance Gap Analysis: Five-step structured process and healthcare clinic regulatory case study. Curriculum instruction by Prof. Chin Ann Feliprada • WVSU CICT",
             "codeSnippets": [],
             "tables": [],
             "images": []
