@@ -563,15 +563,15 @@ const ModifiedTrueFalseCard: React.FC<MTFCardProps> = ({
       </div>
 
       {/* When the user chose FALSE: Interactive Change/Correction Input Area */}
-      {userAnswer === false && (
-        <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 space-y-3">
+      {userAnswer === false && !question.isTrue && (
+        <div className="p-4 sm:p-5 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 space-y-3.5 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               <span>Change Underlined Term:</span>
-              <strong className="underline text-cyan-700 dark:text-cyan-300">"{question.underlinedTerm}"</strong>
+              <strong className="underline text-cyan-700 dark:text-cyan-400">"{question.underlinedTerm}"</strong>
             </span>
-            <span className="text-[11px] text-slate-500">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400">
               Type what the term should be changed to:
             </span>
           </div>
@@ -585,7 +585,7 @@ const ModifiedTrueFalseCard: React.FC<MTFCardProps> = ({
                 setIsCorrectionChecked(false);
               }}
               placeholder={`Enter replacement term for "${question.underlinedTerm}"...`}
-              className="flex-1 px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-slate-900 dark:text-white"
+              className="flex-1 px-4 py-2.5 rounded-xl text-xs sm:text-sm bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-xs"
             />
             <div className="flex items-center gap-2">
               <button
@@ -593,12 +593,12 @@ const ModifiedTrueFalseCard: React.FC<MTFCardProps> = ({
                 disabled={!typedCorrection.trim()}
                 className="px-4 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 disabled:opacity-50 text-white font-bold text-xs transition-colors shrink-0 shadow-xs"
               >
-                Submit Correction
+                Check Correction
               </button>
               <button
                 type="button"
                 onClick={() => setShowAnswerKey(!showAnswerKey)}
-                className="px-3 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs transition-colors shrink-0"
+                className="px-3.5 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs transition-colors shrink-0 border border-slate-300 dark:border-slate-700"
               >
                 {showAnswerKey ? 'Hide Answer' : 'Show Answer'}
               </button>
@@ -608,10 +608,10 @@ const ModifiedTrueFalseCard: React.FC<MTFCardProps> = ({
           {/* Validation of Typed Correction */}
           {isCorrectionChecked && (
             <div
-              className={`p-3 rounded-xl border text-xs flex items-start gap-2.5 ${
+              className={`p-3 rounded-xl border text-xs flex items-start gap-2.5 animate-in fade-in duration-200 ${
                 isCorrectionMatch
-                  ? 'bg-emerald-100 dark:bg-emerald-950/70 border-emerald-400 text-emerald-900 dark:text-emerald-200'
-                  : 'bg-rose-100 dark:bg-rose-950/70 border-rose-400 text-rose-900 dark:text-rose-200'
+                  ? 'bg-emerald-100 dark:bg-emerald-950/80 border-emerald-400 text-emerald-900 dark:text-emerald-200'
+                  : 'bg-rose-100 dark:bg-rose-950/80 border-rose-400 text-rose-900 dark:text-rose-200'
               }`}
             >
               {isCorrectionMatch ? (
@@ -640,31 +640,52 @@ const ModifiedTrueFalseCard: React.FC<MTFCardProps> = ({
         </div>
       )}
 
-      {/* Feedback & Verbatim Correction Panel */}
-      {(isAnswered || studyMode || showAnswerKey) && (
+      {/* Feedback & Verbatim Correction Panel (shown ONLY after checking correction, choosing TRUE, clicking Show Answer, or in studyMode) */}
+      {(studyMode || showAnswerKey || userAnswer === true || (userAnswer === false && (question.isTrue || isCorrectionChecked))) && (
         <div
           className={`p-4 rounded-2xl border text-xs sm:text-sm space-y-2 transition-all ${
-            question.isTrue
+            (question.isTrue && userAnswer === true) || (!question.isTrue && isCorrectionChecked && isCorrectionMatch)
               ? 'bg-emerald-50/70 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-300'
               : 'bg-amber-50/80 dark:bg-amber-950/20 border-amber-300 dark:border-amber-800/60 text-amber-950 dark:text-amber-300'
           }`}
         >
           <div className="flex items-center gap-2 font-bold">
             {question.isTrue ? (
-              <>
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <span>Correct Answer: TRUE (Statement is accurate as written — no modification needed)</span>
-              </>
-            ) : (
-              <>
-                <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                <span>
-                  Correct Answer: FALSE — Change "<strong className="underline">{question.underlinedTerm}</strong>" to{' '}
-                  <span className="font-extrabold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-1.5 py-0.5 rounded">
-                    "{question.correction}"
+              userAnswer === false ? (
+                <>
+                  <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+                  <span>
+                    Incorrect Choice: This statement is actually TRUE! The underlined term "<strong className="underline">{question.underlinedTerm}</strong>" is already accurate as written per {question.sourceSlide}.
                   </span>
-                </span>
-              </>
+                </>
+              ) : (
+                <>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span>Correct Answer: TRUE (Statement is accurate as written — no modification needed)</span>
+                </>
+              )
+            ) : (
+              userAnswer === true ? (
+                <>
+                  <XCircle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0" />
+                  <span>
+                    Incorrect Choice: This statement is FALSE! Change "<strong className="underline">{question.underlinedTerm}</strong>" to{' '}
+                    <span className="font-extrabold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-1.5 py-0.5 rounded">
+                      "{question.correction}"
+                    </span>
+                  </span>
+                </>
+              ) : (
+                <>
+                  <CheckCircle2 className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                  <span>
+                    Correct Answer: FALSE — Change "<strong className="underline">{question.underlinedTerm}</strong>" to{' '}
+                    <span className="font-extrabold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-1.5 py-0.5 rounded">
+                      "{question.correction}"
+                    </span>
+                  </span>
+                </>
+              )
             )}
           </div>
           <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed pl-6 border-l-2 border-slate-300 dark:border-slate-700">
