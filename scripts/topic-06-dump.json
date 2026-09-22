@@ -1,0 +1,152 @@
+[
+  {
+    "slideNumber": 1,
+    "attrs": " data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>Digital Evidence Acquisition</h2>\n          <p>Acquiring volatile and nonvolatile memory</p>\n          <div class=\"social-container\">\n            <small>\n              Mark Joseph J. Solidarios\n              <a href=\"mailto: mjsolidarios@wvsu.edu.ph\" target=\"_blank\">\n                <img class=\"social\" src=\"assets/mail.svg\" />\n              </a>\n              <a href=\"https://github.com/mjsolidarios\" target=\"_blank\">\n                <img class=\"social\" src=\"assets/github.svg\" />\n              </a>\n              <a\n                href=\"https://www.facebook.com/sexynojutsuuser\"\n                target=\"_blank\"\n              >\n                <img class=\"social\" src=\"assets/facebook.svg\" />\n              </a>\n              <a href=\"https://www.twitter.com/mjsolidarios\" target=\"_blank\">\n                <img class=\"social\" src=\"assets/twitter.svg\" />\n              </a>\n            </small>\n          </div>"
+  },
+  {
+    "slideNumber": 2,
+    "attrs": " data-background=\"assets/bg0.jpg\" class=\"left\"",
+    "html": "<img src=\"assets/nav.svg\" alt=\"\" class=\"icon-md\" />\n          <p>\n            <small>\n              <i class=\"glyphicon glyphicon-info-sign\"></i> Use the navigation\n              buttons or the arrow keys to proceed to the remaining slides.\n            </small>\n          </p>\n          <h2>F</h2>\n          <p>\n            <small>\n              <i class=\"glyphicon glyphicon-info-sign\"></i> You can also press\n              <span class=\"highlight\">&gt;</span>\n              <span class=\"highlight\">&gt;</span>F\n              <span class=\"highlight\">&lt;</span>\n              <span class=\"highlight\">&lt;</span> on your keyboard to show your\n              presentation in fullscreen mode.\n            </small>\n          </p>\n          <img src=\"assets/explore.svg\" class=\"icon-md\" alt=\"\" />\n          <p>\n            <small>\n              <i class=\"glyphicon glyphicon-info-sign\"></i> This presentation is\n              best explored with up-to-date web browsers.\n            </small>\n          </p>"
+  },
+  {
+    "slideNumber": 3,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>The main task of a computer forensics investigator is to acquire and analyze computing devices’ memory images</p>"
+  },
+  {
+    "slideNumber": 4,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>\n                Forensic Image File Format\n            </h2>\n            <p class=\"fragment\">\n                A forensic image can have different file formats; some are free and others are proprietary\nformats developed by the company behind the forensic software used to create the\nforensic image. \n            </p>"
+  },
+  {
+    "slideNumber": 5,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>Raw Format</h2>\n            <p class=\"fragment\">Raw format is a bit-by-bit copy of the raw data of the drive\n                under investigation</p>"
+  },
+  {
+    "slideNumber": 6,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Raw Format Naming Schemas</p>\n            <ul>\n                <li class=\"fragment\">001</li>\n                <li class=\"fragment\">dd</li>\n                <li class=\"fragment\">dmg</li>\n                <li class=\"fragment\">raw</li>\n                <li class=\"fragment\">img</li>\n            </ul>"
+  },
+  {
+    "slideNumber": 7,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>AFF</h2>\n            <p class=\"fragment\">\nAdvanced forensic format (AFF) is an open source extensible file format for forensics\nimages; its source code can be freely integrated into other open source and propriety\nprograms. \n            </p>"
+  },
+  {
+    "slideNumber": 8,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h3>Advanced Forensic Format</h3>\n                <ul>\n                    <li class=\"fragment\">Supports two compression algorithms (zlib and LZMA)</li>\n                    <li class=\"fragment\">Can be split to multple files</li>\n                    <li class=\"fragment\">Supports encryption of drive images</li>\n                    <li class=\"fragment\"> AFF uses the “.afd” extension for segmented image files and “.afm” for AFF metadata.</li>\n                </ul>"
+  },
+  {
+    "slideNumber": 9,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>Expert Witness (EnCase)</h2>\n            <p class=\"fragment\">\n                This is a propriety file format created by Guidance Software (now OpenText) for their famous product “EnCase Forensic,” which is widely used by law enforcement in criminal investigations around the globe\n            </p>"
+  },
+  {
+    "slideNumber": 10,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>EnCase</h2>\n                <p class=\"fragment\">\nCan be used to store different types of digital evidence; it is\ncompressible and searchable and the resultant image can be split into multiple files.\n           </p>"
+  },
+  {
+    "slideNumber": 11,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h3>Forensics Image File Validation</h3>\n            <p class=\"fragment\">\nAcquired forensics image files must be validated to ensure their authenticity; validation\nensures that the acquired image is 100% identical to the source and that it has not\nbeen altered during the acquisition process.\n            </p>"
+  },
+  {
+    "slideNumber": 12,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h2>MD5 Algorithm</h2>\n            <p class=\"fragment\">the current industry standard for hashing digital evidence. </p>"
+  },
+  {
+    "slideNumber": 13,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Hashing is the acceptable standard in\n                the computer forensics industry to validate acquired forensics images.</p>"
+  },
+  {
+    "slideNumber": 14,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Hash value is\n                considered as an electronic fingerprint of the resultant image file.</p>"
+  },
+  {
+    "slideNumber": 15,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h3>Acquiring Volatile Memory (Live Acquisition)</h3>\n            <p class=\"fragment\">\n                Live acquisition has become an\n                integral part of any digital investigation type. For instance, there are many types of digital\n                artifacts which only reside on RAM memory, with nothing written to the hard drive to\n                indicate its presence.\n            </p>"
+  },
+  {
+    "slideNumber": 16,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Types of Information on the RAM (P1)</p>\n            <ul>\n                <li class=\"fragment\">Cryptographic keys</li>\n                <li class=\"fragment\">Processes running</li>\n                <li class=\"fragment\">Executed console commands</li>\n                <li class=\"fragment\">Clipboard contents</li>\n                <li class=\"fragment\">Network information</li>\n            </ul>"
+  },
+  {
+    "slideNumber": 17,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Types of Information on the RAM (P2)</p>\n            <ul>\n                <li class=\"fragment\">Decrypted contents</li>\n                <li class=\"fragment\">Registry hives</li>\n                <li class=\"fragment\">Text files and images</li>\n                <li class=\"fragment\">Deleted files</li>\n                <li class=\"fragment\">Web browsing logs</li>\n            </ul>"
+  },
+  {
+    "slideNumber": 18,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Types of Information on the RAM (P3)</p>\n            <ul>\n                <li class=\"fragment\">Open/active registry keys</li>\n                <li class=\"fragment\">Internet account passwords</li>\n                <li class=\"fragment\">Instant messages</li>\n                <li class=\"fragment\">Exploit-related information</li>\n                <li class=\"fragment\">Malware (rootkits and trojan horses)</li>\n                <li class=\"fragment\">Evidence of activity not typically stored on the local hard disk</li>\n            </ul>"
+  },
+  {
+    "slideNumber": 19,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Acquiring volatile memory is similar to acquiring hard drive data; however, it uses\n                different tools, because unlike hard drives, data are not stored in a structured way in the\n                RAM memory</p>"
+  },
+  {
+    "slideNumber": 20,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h3>Acquiring Nonvolatile Memory (Static Acquisition)</h3>\n            <p class=\"fragment\">\nCapturing hard drive images is considered the main part of any computer forensic\ninvestigation, as most data that may contain inculpatory or exculpatory evidence will\nmost probably be residing there. \n            </p>"
+  },
+  {
+    "slideNumber": 21,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p class=\"fragment\">\n               <b>Note:</b> Before acquiring the hard drive image, you need to write-protect the suspect\n                hard drive before attaching it to your forensic workstation. \n            </p>\n            <p class=\"fragment\">a hardware write blocker is preferred over the software solutions.</p>"
+  },
+  {
+    "slideNumber": 22,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Many investigators prefer to live boot from using a Linux forensic distribution and then\n            attach a suspect drive without any danger of manipulating it with data from external\n            sources. </p>"
+  },
+  {
+    "slideNumber": 23,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>If you are using a Windows OS for your forensic workstation and you want to\n            know how to write-protect your investigated hard drive to safely acquire its image.</p>"
+  },
+  {
+    "slideNumber": 24,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>When creating a disk image, the destination hDD should be forensically clean (completely wiped)\n            before using it to store the acquired forensics image(s).</p>\n            <p class=\"fragment\">\n              Use a wiping tool to erase any recoverable data on the forensic drive before performing the operation.\n            </p>"
+  },
+  {
+    "slideNumber": 25,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<p>Moo Disk Wiper</p>\n          <p><small>Moo0 Disk Wiper lets you easily erase all the recoverable data from the empty space of your disk drive, leaving the existing files untouched. </small></p>"
+  },
+  {
+    "slideNumber": 26,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": "<h3>Using OSForensics</h3>\n          <p>Have a copy from your instructor and install a trial version on your PC/Laptop</p>"
+  },
+  {
+    "slideNumber": 27,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": ""
+  },
+  {
+    "slideNumber": 28,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": ""
+  },
+  {
+    "slideNumber": 29,
+    "attrs": " class=\"left\" data-background=\"assets/bg0.jpg\"",
+    "html": ""
+  },
+  {
+    "slideNumber": 30,
+    "attrs": "",
+    "html": "<h2>Thank You!</h2>\n          <p>\n            <small\n              >This presentation is made of\n              <i class=\"fa glyphicon glyphicon-heart\"></i> and\n              <strong>HTML 5</strong>\n            </small>\n          </p>"
+  }
+]

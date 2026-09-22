@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=6c62bbbd-7179-4a2a-a220-68879a7d622c
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Digital Evidence Acquisition</title>
+
+    <meta name="description" content="Presentation made with reveal.js" />
+    <meta name="author" content="Mark Joseph J. Solidarios" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="assets/bg0.jpg">
+          <h2>Digital Evidence Acquisition</h2>
+          <p>Acquiring volatile and nonvolatile memory</p>
+          <div class="social-container">
+            <small>
+              Mark Joseph J. Solidarios
+              <a href="mailto: mjsolidarios@wvsu.edu.ph" target="_blank">
+                <img class="social" src="assets/mail.svg" />
+              </a>
+              <a href="https://github.com/mjsolidarios" target="_blank">
+                <img class="social" src="assets/github.svg" />
+              </a>
+              <a
+                href="https://www.facebook.com/sexynojutsuuser"
+                target="_blank"
+              >
+                <img class="social" src="assets/facebook.svg" />
+              </a>
+              <a href="https://www.twitter.com/mjsolidarios" target="_blank">
+                <img class="social" src="assets/twitter.svg" />
+              </a>
+            </small>
+          </div>
+        </section>
+        <section data-background="assets/bg0.jpg" class="left">
+          <img src="assets/nav.svg" alt="" class="icon-md" />
+          <p>
+            <small>
+              <i class="glyphicon glyphicon-info-sign"></i> Use the navigation
+              buttons or the arrow keys to proceed to the remaining slides.
+            </small>
+          </p>
+          <h2>F</h2>
+          <p>
+            <small>
+              <i class="glyphicon glyphicon-info-sign"></i> You can also press
+              <span class="highlight">&gt;</span>
+              <span class="highlight">&gt;</span>F
+              <span class="highlight">&lt;</span>
+              <span class="highlight">&lt;</span> on your keyboard to show your
+              presentation in fullscreen mode.
+            </small>
+          </p>
+          <img src="assets/explore.svg" class="icon-md" alt="" />
+          <p>
+            <small>
+              <i class="glyphicon glyphicon-info-sign"></i> This presentation is
+              best explored with up-to-date web browsers.
+            </small>
+          </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>The main task of a computer forensics investigator is to acquire and analyze computing devices’ memory images</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h2>
+                Forensic Image File Format
+            </h2>
+            <p class="fragment">
+                A forensic image can have different file formats; some are free and others are proprietary
+formats developed by the company behind the forensic software used to create the
+forensic image. 
+            </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h2>Raw Format</h2>
+            <p class="fragment">Raw format is a bit-by-bit copy of the raw data of the drive
+                under investigation</p>
+        </section>
+         <section class="left" data-background="assets/bg0.jpg">
+            <p>Raw Format Naming Schemas</p>
+            <ul>
+                <li class="fragment">001</li>
+                <li class="fragment">dd</li>
+                <li class="fragment">dmg</li>
+                <li class="fragment">raw</li>
+                <li class="fragment">img</li>
+            </ul>
+        </section>
+         <section class="left" data-background="assets/bg0.jpg">
+            <h2>AFF</h2>
+            <p class="fragment">
+Advanced forensic format (AFF) is an open source extensible file format for forensics
+images; its source code can be freely integrated into other open source and propriety
+programs. 
+            </p>
+        </section>
+         <section class="left" data-background="assets/bg0.jpg">
+            <h3>Advanced Forensic Format</h3>
+                <ul>
+                    <li class="fragment">Supports two compression algorithms (zlib and LZMA)</li>
+                    <li class="fragment">Can be split to multple files</li>
+                    <li class="fragment">Supports encryption of drive images</li>
+                    <li class="fragment"> AFF uses the “.afd” extension for segmented image files and “.afm” for AFF metadata.</li>
+                </ul>
+
+        </section>
+         <section class="left" data-background="assets/bg0.jpg">
+            <h2>Expert Witness (EnCase)</h2>
+            <p class="fragment">
+                This is a propriety file format created by Guidance Software (now OpenText) for their famous product “EnCase Forensic,” which is widely used by law enforcement in criminal investigations around the globe
+            </p>
+        </section>
+          <section class="left" data-background="assets/bg0.jpg">
+                <h2>EnCase</h2>
+                <p class="fragment">
+Can be used to store different types of digital evidence; it is
+compressible and searchable and the resultant image can be split into multiple files.
+           </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h3>Forensics Image File Validation</h3>
+            <p class="fragment">
+Acquired forensics image files must be validated to ensure their authenticity; validation
+ensures that the acquired image is 100% identical to the source and that it has not
+been altered during the acquisition process.
+            </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h2>MD5 Algorithm</h2>
+            <p class="fragment">the current industry standard for hashing digital evidence. </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Hashing is the acceptable standard in
+                the computer forensics industry to validate acquired forensics images.</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Hash value is
+                considered as an electronic fingerprint of the resultant image file.</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h3>Acquiring Volatile Memory (Live Acquisition)</h3>
+            <p class="fragment">
+                Live acquisition has become an
+                integral part of any digital investigation type. For instance, there are many types of digital
+                artifacts which only reside on RAM memory, with nothing written to the hard drive to
+                indicate its presence.
+            </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Types of Information on the RAM (P1)</p>
+            <ul>
+                <li class="fragment">Cryptographic keys</li>
+                <li class="fragment">Processes running</li>
+                <li class="fragment">Executed console commands</li>
+                <li class="fragment">Clipboard contents</li>
+                <li class="fragment">Network information</li>
+            </ul>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Types of Information on the RAM (P2)</p>
+            <ul>
+                <li class="fragment">Decrypted contents</li>
+                <li class="fragment">Registry hives</li>
+                <li class="fragment">Text files and images</li>
+                <li class="fragment">Deleted files</li>
+                <li class="fragment">Web browsing logs</li>
+            </ul>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Types of Information on the RAM (P3)</p>
+            <ul>
+                <li class="fragment">Open/active registry keys</li>
+                <li class="fragment">Internet account passwords</li>
+                <li class="fragment">Instant messages</li>
+                <li class="fragment">Exploit-related information</li>
+                <li class="fragment">Malware (rootkits and trojan horses)</li>
+                <li class="fragment">Evidence of activity not typically stored on the local hard disk</li>
+            </ul>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p>Acquiring volatile memory is similar to acquiring hard drive data; however, it uses
+                different tools, because unlike hard drives, data are not stored in a structured way in the
+                RAM memory</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <h3>Acquiring Nonvolatile Memory (Static Acquisition)</h3>
+            <p class="fragment">
+Capturing hard drive images is considered the main part of any computer forensic
+investigation, as most data that may contain inculpatory or exculpatory evidence will
+most probably be residing there. 
+            </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+            <p class="fragment">
+               <b>Note:</b> Before acquiring the hard drive image, you need to write-protect the suspect
+                hard drive before attaching it to your forensic workstation. 
+            </p>
+            <p class="fragment">a hardware write blocker is preferred over the software solutions.</p>
+
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+          <p>Many investigators prefer to live boot from using a Linux forensic distribution and then
+            attach a suspect drive without any danger of manipulating it with data from external
+            sources. </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+          <p>If you are using a Windows OS for your forensic workstation and you want to
+            know how to write-protect your investigated hard drive to safely acquire its image.</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+          <p>When creating a disk image, the destination hDD should be forensically clean (completely wiped)
+            before using it to store the acquired forensics image(s).</p>
+            <p class="fragment">
+              Use a wiping tool to erase any recoverable data on the forensic drive before performing the operation.
+            </p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+          <p>Moo Disk Wiper</p>
+          <p><small>Moo0 Disk Wiper lets you easily erase all the recoverable data from the empty space of your disk drive, leaving the existing files untouched. </small></p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg">
+          <h3>Using OSForensics</h3>
+          <p>Have a copy from your instructor and install a trial version on your PC/Laptop</p>
+        </section>
+        <section class="left" data-background="assets/bg0.jpg"></section>
+        <section class="left" data-background="assets/bg0.jpg"></section>
+        <section class="left" data-background="assets/bg0.jpg"></section>
+        <section>
+          <h2>Thank You!</h2>
+          <p>
+            <small
+              >This presentation is made of
+              <i class="fa glyphicon glyphicon-heart"></i> and
+              <strong>HTML 5</strong>
+            </small>
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          {
+            src: "plugin/markdown/marked.js",
+          },
+          {
+            src: "plugin/zoom-js/zoom.js",
+          },
+          {
+            src: "plugin/markdown/markdown.js",
+          },
+          {
+            src: "plugin/notes/notes.js",
+            async: true,
+          },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

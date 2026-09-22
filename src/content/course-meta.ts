@@ -1,4 +1,4 @@
-﻿import { CourseMetadata } from '../types/content';
+import { CourseMetadata } from '../types/content';
 
 export const COURSE_METADATA: CourseMetadata = {
   code: 'CIT 245',
@@ -85,3 +85,20 @@ export const MIDTERM_EXAM_COVERAGE = {
     'Understand the volatile order of evidence and live response documentation protocols.',
   ],
 };
+
+export const POST_MIDTERM_TOPICS = [
+  {
+    number: '06',
+    title: 'Digital Evidence Acquisition',
+    highlights: [
+      'Forensic image file formats (Raw .dd/.001, AFF .afd/.afm, EnCase .E01)',
+      'Forensic image file validation & MD5/SHA-256 cryptographic fingerprints',
+      'Acquiring volatile memory (RAM artifacts, live acquisition, unstructured memory)',
+      'Acquiring nonvolatile memory (Static disk acquisition & dead imaging)',
+      'Hardware write-blockers & Windows StorageDevicePolicies registry write-protection',
+      'Forensic media sanitization & wiping (Moo0 Disk Wiper, dd zero-fill)',
+      'Hands-on acquisition with PassMark OSForensics',
+    ],
+  },
+];
+

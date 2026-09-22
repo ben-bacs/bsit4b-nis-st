@@ -98,7 +98,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectTopic, onOpenSearch 
                 </span>
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                Midterm examination exclusively covers the four active topics presented below.
+                Midterm examination covers Topics 00, 01, 04, and 05. Topic 06 is newly integrated for post-midterm studies.
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectTopic, onOpenSearch 
             </p>
           </div>
           <span className="text-xs font-mono text-cyan-800 dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-950/60 px-2.5 py-1 rounded-lg border border-cyan-300 dark:border-cyan-800/60 font-semibold">
-            4 Topics • 170 Slides
+            {ALL_TOPICS.length} Topics • {ALL_TOPICS.reduce((acc, t) => acc + t.totalSlides, 0)} Slides
           </span>
         </div>
 

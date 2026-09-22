@@ -127,6 +127,22 @@ const MASTER_REFERENCES: ReferenceItem[] = [
     citation: "AccessData / Exterro FTK Imager Technical Documentation"
   },
   {
+    title: "Advanced Forensic Format (AFF / AFF4)",
+    category: "tools",
+    authorOrOrg: "Simson Garfinkel & Basis Technology",
+    description: "Open-source extensible container format for digital evidence images supporting zlib/LZMA compression, arbitrary metadata (.afm), multi-volume segmentation (.afd), and encryption without vendor lock-in.",
+    url: "https://github.com/simsong/AFFLIBv3",
+    citation: "Garfinkel, S. (2006). The Advanced Forensic Format. International Journal of Digital Evidence"
+  },
+  {
+    title: "Expert Witness Format (EWF / EnCase E01)",
+    category: "tools",
+    authorOrOrg: "Guidance Software / OpenText & Joachim Metz (libewf)",
+    description: "De facto standard format for forensic disk imaging across worldwide law enforcement, encapsulating case metadata, volume headers, sector-level 32-bit CRC checks, and MD5 acquisition hashes.",
+    url: "https://github.com/libyal/libewf",
+    citation: "Metz, J. (2008). libewf: Library and tools to support the Expert Witness Compression Format"
+  },
+  {
     title: "Volatility 3 Memory Forensics Framework",
     category: "tools",
     authorOrOrg: "The Volatility Foundation",
@@ -522,9 +538,9 @@ export const AboutPage: React.FC = () => {
       {/* Curriculum Quick Navigation */}
       <div className="space-y-4">
         <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-          Active Curriculum Directory (170 Slides)
+          Active Curriculum Directory ({ALL_TOPICS.reduce((acc, t) => acc + t.totalSlides, 0)} Slides across {ALL_TOPICS.length} Topics)
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {ALL_TOPICS.map((topic) => (
             <a
               key={topic.id}

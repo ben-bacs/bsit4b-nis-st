@@ -1,20 +1,23 @@
-﻿import { TOPIC_01 } from './topics/topic-01';
+import { TOPIC_01 } from './topics/topic-01';
 import { TOPIC_02 } from './topics/topic-02';
 import { TOPIC_03 } from './topics/topic-03';
 import { TOPIC_04 } from './topics/topic-04';
+import { TOPIC_05 } from './topics/topic-05';
 import { Topic, SearchResult } from '../types/content';
 
 export { TOPIC_01 } from './topics/topic-01';
 export { TOPIC_02 } from './topics/topic-02';
 export { TOPIC_03 } from './topics/topic-03';
 export { TOPIC_04 } from './topics/topic-04';
-export { COURSE_METADATA, MIDTERM_EXAM_COVERAGE } from './course-meta';
+export { TOPIC_05 } from './topics/topic-05';
+export { COURSE_METADATA, MIDTERM_EXAM_COVERAGE, POST_MIDTERM_TOPICS } from './course-meta';
 
 export const ALL_TOPICS: Topic[] = [
   TOPIC_01,
   TOPIC_02,
   TOPIC_03,
   TOPIC_04,
+  TOPIC_05,
 ];
 
 export function getTopicById(id: string): Topic | undefined {

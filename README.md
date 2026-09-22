@@ -21,11 +21,12 @@
 
 ## ✨ Features & Enhancements
 
-1. **100% Curriculum Content Fidelity Across All 4 Topics (170 Slides)**:
+1. **100% Curriculum Content Fidelity Across All 5 Topics (200 Slides)**:
    - **Topic 00**: *Linux Essentials for Digital Forensics* (37 slides)
    - **Topic 01**: *Intro to Cyberforensics* (18 slides)
    - **Topic 04**: *Kali Linux & Technical Concepts* (55 slides)
    - **Topic 05**: *Crime Scene Investigation* (60 slides)
+   - **Topic 06**: *Digital Evidence Acquisition* (30 slides)
 2. **Dual Viewing Experiences**:
    - **Study Reader Mode**: Formatted document layout with copyable terminal commands, sticky Table of Contents, responsive video embeds, zoomable media, and warning notes.
    - **Interactive Slide Deck**: Reveal-style presentation mode with keyboard arrows, spacebar, full-screen toggle (<kbd>F</kbd>), and slide scrubber.
